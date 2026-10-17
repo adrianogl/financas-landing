@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Finanças — quanto ainda falta cair na conta</title>
-  <meta name="description" content="App de finanças pessoais para iPhone e iPad. Cadastre receitas fixas, por hora e avulsas, marque o que caiu e veja quanto falta receber no mês.">
+  <title>Finanças — o que falta cair e o que falta pagar</title>
+  <meta name="description" content="App de finanças pessoais para iPhone e iPad. Cadastre receitas e contas fixas, marque o que caiu e o que foi pago e veja quanto falta receber e pagar no mês.">
   <meta name="theme-color" content="#FAFBFD" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0B0F1A" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Finanças">
-  <meta property="og:description" content="Saiba quanto ainda falta cair na conta este mês.">
+  <meta property="og:description" content="Saiba quanto falta cair e quanto falta pagar este mês.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icon.svg">
@@ -24,6 +24,7 @@
     </a>
     <nav>
       <a href="#recursos">Recursos</a>
+      <a href="#ipad">iPad</a>
       <a href="#privacidade">Privacidade</a>
       <a class="nav-cta" href="https://github.com/adrianogl/financas">GitHub</a>
     </nav>
@@ -39,8 +40,8 @@
           </svg>
           <i class="wordmark-dot"></i>
         </div>
-        <h1>Saiba quanto ainda falta cair na conta este mês.</h1>
-        <p class="lead">Cadastre o salário, os freelas por hora e aquele Pix avulso. O Finanças calcula o dia útil em que cada valor deve cair, avisa o que atrasou e mostra o que falta receber.</p>
+        <h1>Saiba quanto falta cair e quanto falta pagar este mês.</h1>
+        <p class="lead">Cadastre o salário, os freelas por hora e as contas que chegam todo mês. O Finanças calcula o dia útil de cada data, avisa no dia do vencimento e mostra, lado a lado, o que falta receber e o que falta pagar.</p>
         <div class="actions">
           <span class="button button-primary" aria-disabled="true">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c.03 2.86 2.5 3.81 2.53 3.82-.02.07-.4 1.36-1.3 2.69-.79 1.15-1.6 2.29-2.88 2.31-1.26.02-1.67-.75-3.11-.75-1.45 0-1.9.73-3.09.77-1.24.05-2.18-1.24-2.97-2.38-1.62-2.34-2.85-6.6-1.19-9.48.82-1.43 2.29-2.34 3.89-2.36 1.21-.02 2.36.82 3.1.82.74 0 2.13-1.01 3.6-.86.61.03 2.33.25 3.44 1.86-.09.06-2.05 1.2-2.02 3.57M14 3.9c.66-.8 1.1-1.9.98-3-.95.04-2.1.63-2.78 1.43-.61.7-1.14 1.82-1 2.9 1.06.08 2.14-.54 2.8-1.33"/></svg>
@@ -51,7 +52,7 @@
         <p class="footnote">iPhone e iPad · iOS 26 · código aberto (MIT)</p>
       </div>
 
-      <div class="phone" role="img" aria-label="Tela inicial do Finanças mostrando o saldo de outubro e quanto falta receber">
+      <div class="phone" role="img" aria-label="Tela inicial do Finanças mostrando o saldo de outubro, quanto falta receber e quanto falta pagar">
         <div class="phone-screen">
           <div class="phone-island"></div>
           <div class="screen-head">
@@ -64,7 +65,7 @@
 
           <div class="glass card-balance">
             <small>Saldo do mês</small>
-            <strong class="amount">R$&nbsp;8.420,00</strong>
+            <strong class="amount">R$&nbsp;5.112,40</strong>
             <svg class="spark" viewBox="0 0 100 34" preserveAspectRatio="none" aria-hidden="true">
               <defs>
                 <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
@@ -77,11 +78,17 @@
             </svg>
           </div>
 
-          <div class="glass card-pending">
-            <small>Falta receber em outubro</small>
-            <strong class="amount">R$&nbsp;2.180,00</strong>
-            <div class="progress"><span style="width: 74%"></span></div>
-            <small class="muted">74% já caiu</small>
+          <div class="glass card-split">
+            <div>
+              <small>Falta receber</small>
+              <strong>R$&nbsp;2.180</strong>
+              <div class="progress"><span style="width: 74%"></span></div>
+            </div>
+            <div>
+              <small>Falta pagar</small>
+              <strong>R$&nbsp;1.064</strong>
+              <div class="progress"><span style="width: 52%"></span></div>
+            </div>
           </div>
 
           <div class="glass list">
@@ -96,6 +103,11 @@
               <em>R$&nbsp;2.180</em>
             </div>
             <div class="row">
+              <span class="dot dot-text"></span>
+              <div><b>Luz</b><small>Despesa · paga 14 out</small></div>
+              <em>−&nbsp;R$&nbsp;212</em>
+            </div>
+            <div class="row">
               <span class="dot dot-warning"></span>
               <div><b>Aluguel da vaga</b><small>Atrasada · 10 out</small></div>
               <em class="warning">R$&nbsp;240</em>
@@ -104,8 +116,60 @@
 
           <div class="glass tabbar">
             <span class="active">Início</span>
-            <span>Atrasadas</span>
             <span>Receitas</span>
+            <span>Despesas</span>
+            <span>Atrasadas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="ipad" class="ipad-section">
+      <div class="ipad-copy">
+        <h2>No iPad, o mês inteiro numa tela.</h2>
+        <p>Na horizontal, as abas viram uma barra lateral e a tela inicial vira um painel: saldo com o gráfico do mês, o que falta receber e pagar, e as receitas e as contas lado a lado, com o botão de receber ou pagar na própria linha.</p>
+        <p>Em Receitas e Despesas, a lista fica à esquerda e o detalhe do que você tocou fica à direita, com os últimos meses. Recolha a barra e ganhe uma terceira coluna.</p>
+        <p class="footnote">Mesma conta no iPhone e no iPad. O que você marca num aparece no outro.</p>
+      </div>
+
+      <div class="ipad" role="img" aria-label="Tela inicial do Finanças no iPad, com barra lateral, saldo do mês e listas de receitas e despesas lado a lado">
+        <div class="ipad-screen">
+          <aside class="glass ipad-sidebar">
+            <b class="ipad-brand"><img src="assets/icon.svg" alt="" width="18" height="18">Finanças</b>
+            <span class="active">Início</span>
+            <span>Receitas <i>2</i></span>
+            <span>Despesas <i>3</i></span>
+            <span>Atrasadas <i class="warning">1</i></span>
+          </aside>
+          <div class="ipad-main">
+            <div class="ipad-top">
+              <div class="glass ipad-balance">
+                <small>Saldo de outubro</small>
+                <strong>R$&nbsp;5.112,40</strong>
+                <svg class="spark" viewBox="0 0 100 34" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M0 30 C 10 30, 12 8, 22 9 S 38 12, 48 14 S 70 16, 100 17 L 100 34 L 0 34 Z" fill="url(#sparkFill)"/>
+                  <path d="M0 30 C 10 30, 12 8, 22 9 S 38 12, 48 14 S 70 16, 100 17" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="ipad-stats">
+                <div class="glass"><small>Falta receber</small><strong>R$&nbsp;2.180</strong></div>
+                <div class="glass"><small>Falta pagar</small><strong>R$&nbsp;1.064</strong></div>
+                <div class="glass"><small>Atrasadas</small><strong class="warning">1</strong></div>
+              </div>
+            </div>
+            <div class="ipad-lists">
+              <div class="glass">
+                <b>Receitas</b>
+                <div class="ipad-row"><span>Consultoria<small>cai 20 out</small></span><em class="pill pill-positive">Receber</em></div>
+                <div class="ipad-row"><span>Salário<small>1º out</small></span><em class="positive">+&nbsp;R$&nbsp;6.000</em></div>
+              </div>
+              <div class="glass">
+                <b>Despesas</b>
+                <div class="ipad-row"><span>Água<small>vence 20 out · estimada</small></span><em class="pill">Pagar</em></div>
+                <div class="ipad-row"><span>Luz<small>paga 14 out</small></span><em>−&nbsp;R$&nbsp;212</em></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -123,24 +187,31 @@
         </article>
         <article class="glass feature">
           <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+          </span>
+          <h3>Contas fixas</h3>
+          <p>Internet, condomínio, água e luz. Cadastre uma vez com um valor estimado; depois de três meses pagos, o estimado vira a média deles. Quando a conta chega, lance o valor real.</p>
+        </article>
+        <article class="glass feature">
+          <span class="feature-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
           </span>
-          <h3>Próximo dia útil</h3>
-          <p>Se a data cai no sábado, domingo ou num feriado bancário nacional, a previsão passa para o próximo dia útil.</p>
+          <h3>Dia útil do seu jeito</h3>
+          <p>Data no fim de semana ou feriado nacional? Escolha se a receita passa para o próximo dia útil, volta para o anterior ou fica na data. Contas vencem sempre no próximo dia útil.</p>
         </article>
         <article class="glass feature">
           <span class="feature-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>
           </span>
-          <h3>Avisos do que atrasou</h3>
-          <p>A aba Atrasadas junta o que passou da data. Lembretes às 8h e às 19h até você marcar como recebido.</p>
+          <h3>Avisos na hora certa</h3>
+          <p>Aviso no dia em que uma receita deve cair ou uma conta vence, e lembrete de manhã e à noite enquanto algo estiver atrasado. Você escolhe os horários e o que ligar.</p>
         </article>
         <article class="glass feature">
           <span class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="12" height="9" rx="1.5"/><rect x="13" y="9" width="8" height="12" rx="1.8"/><path d="M6 17h4"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
           </span>
-          <h3>iPhone e iPad juntos</h3>
-          <p>Entre com a sua conta e os dados aparecem iguais em todos os aparelhos, com foto de avatar e tudo.</p>
+          <h3>Histórico de cada lançamento</h3>
+          <p>Toque numa receita ou conta e veja o valor do mês, o vencimento e quanto entrou ou saiu nos últimos meses. Receber, pagar ou corrigir fica ali mesmo.</p>
         </article>
         <article class="glass feature">
           <span class="feature-icon" aria-hidden="true">
@@ -148,13 +219,6 @@
           </span>
           <h3>Trava com Face ID</h3>
           <p>Face ID, Touch ID ou um PIN de 4 dígitos. Ninguém vê seus valores só porque pegou o celular.</p>
-        </article>
-        <article class="glass feature">
-          <span class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3.5 17c3-1 4.5-5 8-4.5s4.5-4.5 9-5.5"/><circle cx="20.5" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg>
-          </span>
-          <h3>O mês de relance</h3>
-          <p>Escolha o mês na Home e veja o saldo, quanto falta receber e cada lançamento, sem planilha.</p>
         </article>
       </div>
     </section>
@@ -173,7 +237,7 @@
 
     <section class="closing">
       <img src="assets/icon.svg" alt="" width="88" height="88">
-      <h2>Chega de abrir o extrato para lembrar o que falta cair.</h2>
+      <h2>Chega de abrir o extrato para lembrar o que falta cair e o que falta pagar.</h2>
       <div class="actions">
         <span class="button button-primary" aria-disabled="true">Em breve na App Store</span>
         <a class="button button-glass" href="https://github.com/adrianogl/financas">Ver o código</a>

@@ -323,6 +323,103 @@ a.button:hover { transform: translateY(-2px); box-shadow: var(--glass-shadow); }
 .positive { color: var(--positive); }
 .warning { color: var(--warning); }
 
+.dot-text { background: var(--text-secondary); }
+
+.card-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.card-split strong { display: block; font-size: 1.25em; letter-spacing: -0.03em; margin-top: 2px; }
+
+.card-split .progress { margin-bottom: 0; }
+
+.card-split > div + div { border-left: 1px solid var(--glass-border); padding-left: 12px; }
+
+.ipad-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 48px;
+  padding: 32px 0 96px;
+}
+
+.ipad-section h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px; }
+
+.ipad-copy p { color: var(--text-secondary); margin: 0 0 12px; }
+
+.ipad {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 10px;
+  border-radius: 30px;
+  background: var(--phone-frame);
+  box-shadow: 0 40px 80px rgba(20, 35, 90, 0.22), inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+
+.ipad-screen {
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 26% 1fr;
+  gap: 10px;
+  padding: 10px;
+  font-size: clamp(8px, 1.05vw, 12px);
+  background:
+    radial-gradient(circle at 10% 8%, var(--blob-primary), transparent 60%),
+    radial-gradient(circle at 95% 40%, var(--blob-secondary), transparent 55%),
+    radial-gradient(circle at 30% 90%, var(--blob-tertiary), transparent 60%),
+    var(--background);
+}
+
+.ipad .glass { border-radius: 16px; }
+
+.ipad small { display: block; color: var(--text-secondary); font-size: 0.85em; }
+
+.ipad-sidebar { display: flex; flex-direction: column; gap: 4px; padding: 12px 8px; }
+
+.ipad-brand { display: flex; align-items: center; gap: 6px; padding: 0 6px 10px; font-size: 1.1em; letter-spacing: -0.02em; }
+
+.ipad-brand img { border-radius: 5px; width: 1.5em; height: 1.5em; }
+
+.ipad-sidebar span { display: flex; justify-content: space-between; padding: 6px 8px; border-radius: 10px; }
+
+.ipad-sidebar span.active { background: rgba(61, 111, 224, 0.14); color: var(--accent); font-weight: 600; }
+
+.ipad-sidebar i { font-style: normal; color: var(--text-secondary); }
+
+.ipad-sidebar i.warning { color: var(--warning); font-weight: 600; }
+
+.ipad-main { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+
+.ipad-top { display: grid; grid-template-columns: 1.4fr 1fr; gap: 10px; }
+
+.ipad-balance { padding: 12px; }
+
+.ipad-balance strong { display: block; font-size: 1.8em; letter-spacing: -0.03em; }
+
+.ipad-balance .spark { height: 4.5em; }
+
+.ipad-stats { display: grid; gap: 8px; }
+
+.ipad-stats .glass { padding: 8px 12px; }
+
+.ipad-stats strong { font-size: 1.15em; letter-spacing: -0.02em; }
+
+.ipad-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.ipad-lists .glass { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+
+.ipad-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+
+.ipad-row span { font-weight: 600; }
+
+.ipad-row small { font-weight: 400; }
+
+.ipad-row em { font-style: normal; font-weight: 600; white-space: nowrap; }
+
+.pill { padding: 3px 9px; border-radius: 999px; background: rgba(61, 111, 224, 0.14); color: var(--accent); font-size: 0.9em; }
+
+.pill-positive { background: rgba(46, 139, 110, 0.14); color: var(--positive); }
+
 .features { padding: 32px 0 96px; }
 
 .features h2, .closing h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 800; }
@@ -422,6 +519,8 @@ footer a:hover { color: var(--text); }
   .phone { rotate: 0deg; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .privacy { grid-template-columns: 1fr; padding: 32px; }
+  .ipad-section { grid-template-columns: 1fr; gap: 32px; }
+  .ipad-screen { font-size: clamp(7px, 1.8vw, 12px); }
 }
 
 @media (max-width: 600px) {
@@ -429,6 +528,9 @@ footer a:hover { color: var(--text); }
   .grid { grid-template-columns: 1fr; }
   .privacy { padding: 26px; }
   .closing { padding: 80px 0 72px; }
+  .ipad { padding: 6px; border-radius: 20px; }
+  .ipad-screen { font-size: 6.5px; padding: 6px; gap: 6px; border-radius: 15px; }
+  .ipad .glass { border-radius: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
