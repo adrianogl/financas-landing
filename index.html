@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Finanças — o que falta cair e o que falta pagar</title>
-  <meta name="description" content="App de finanças pessoais para iPhone e iPad. Cadastre receitas e contas fixas, marque o que caiu e o que foi pago e veja quanto falta receber e pagar no mês.">
+  <meta name="description" content="App de finanças pessoais para iPhone e iPad. Cadastre receitas e contas fixas, marque o que caiu e o que foi pago, veja quanto falta receber e pagar no mês e quanto já está comprometido no cartão.">
   <meta name="theme-color" content="#FAFBFD" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0B0F1A" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Finanças">
@@ -24,6 +24,7 @@
     </a>
     <nav>
       <a href="#recursos">Recursos</a>
+      <a href="#cartoes">Cartões</a>
       <a href="#ipad">iPad</a>
       <a href="#privacidade">Privacidade</a>
       <a class="nav-cta" href="https://github.com/adrianogl/financas">GitHub</a>
@@ -118,6 +119,7 @@
             <span class="active">Início</span>
             <span>Receitas</span>
             <span>Despesas</span>
+            <span>Cartões</span>
             <span>Atrasadas</span>
           </div>
         </div>
@@ -140,6 +142,7 @@
             <span class="active">Início</span>
             <span>Receitas <i>2</i></span>
             <span>Despesas <i>3</i></span>
+            <span>Cartões <i>2</i></span>
             <span>Atrasadas <i class="warning">1</i></span>
           </aside>
           <div class="ipad-main">
@@ -172,6 +175,80 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="cartoes" class="cards-section">
+      <div class="phone phone-flat" role="img" aria-label="Aba Cartões do Finanças mostrando o valor comprometido em novembro, um gráfico dos próximos meses e as parcelas que estão terminando">
+        <div class="phone-screen">
+          <div class="phone-island"></div>
+          <div class="screen-head">
+            <strong>Cartões</strong>
+          </div>
+
+          <div class="glass review">
+            <span class="review-count">2</span>
+            <div><b>2 recorrências para revisar</b><small>Streaming, Clube de vinhos</small></div>
+          </div>
+
+          <div class="chips">
+            <span class="chip active">Todos</span>
+            <span class="chip">C6</span>
+            <span class="chip">Nubank</span>
+            <span class="chip">Inter</span>
+          </div>
+
+          <div class="glass commitment">
+            <small>Comprometido em novembro</small>
+            <strong class="amount">R$&nbsp;1.874,30</strong>
+            <div class="commitment-split">
+              <span><i class="tag tag-installments">parcelas</i>R$&nbsp;1.120,40</span>
+              <span><i class="tag tag-fixed">fixos</i>R$&nbsp;753,90</span>
+            </div>
+            <div class="bars" aria-hidden="true">
+              <span style="--i: 1120; --f: 754"></span>
+              <span style="--i: 830; --f: 754"></span>
+              <span style="--i: 830; --f: 754"></span>
+              <span style="--i: 610; --f: 754"></span>
+              <span style="--i: 610; --f: 754"></span>
+              <span style="--i: 420; --f: 754"></span>
+              <span style="--i: 420; --f: 754"></span>
+              <span style="--i: 290; --f: 754"></span>
+              <span style="--i: 290; --f: 754"></span>
+              <span style="--i: 120; --f: 754"></span>
+              <span style="--i: 0; --f: 754"></span>
+              <span style="--i: 0; --f: 754"></span>
+            </div>
+          </div>
+
+          <div class="glass list">
+            <div class="row">
+              <span class="dot dot-positive"></span>
+              <div><b>Geladeira</b><small>10/10 em novembro</small></div>
+              <em>R$&nbsp;289,90<small class="positive">libera em dez</small></em>
+            </div>
+            <div class="row">
+              <span class="dot dot-positive"></span>
+              <div><b>Passagem aérea</b><small>6/6 em dezembro</small></div>
+              <em>R$&nbsp;184,00<small class="positive">libera em jan</small></em>
+            </div>
+          </div>
+
+          <div class="glass tabbar">
+            <span>Início</span>
+            <span>Receitas</span>
+            <span>Despesas</span>
+            <span class="active">Cartões</span>
+            <span>Atrasadas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-copy">
+        <h2>Quanto do cartão já está comprometido.</h2>
+        <p>Conecte seus cartões pelo Open Finance e veja, mês a mês, quanto das próximas faturas já está tomado por parcelas e assinaturas. O gráfico mostra a curva caindo conforme as compras parceladas terminam.</p>
+        <p>O app separa o que está terminando, com o mês em que o valor fica livre, e reconhece cobranças que se repetem. Uma assinatura só passa a contar como fixa depois que você confirma.</p>
+        <p class="footnote">C6, Caixa, Nubank, Inter e outros bancos pelo MeuPluggy. Atualiza uma vez por dia.</p>
       </div>
     </section>
 
@@ -215,6 +292,13 @@
         </article>
         <article class="glass feature">
           <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg>
+          </span>
+          <h3>Comprometido no cartão</h3>
+          <p>Parcelas e assinaturas dos seus cartões somadas nos próximos 12 meses. Veja o que termina em breve e quanto fica livre em cada mês.</p>
+        </article>
+        <article class="glass feature">
+          <span class="feature-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
           </span>
           <h3>Dia útil do seu jeito</h3>
@@ -247,10 +331,11 @@
     <section id="privacidade" class="privacy glass">
       <div>
         <h2>Seus dados são seus</h2>
-        <p>Os lançamentos ficam num Postgres com Row Level Security: cada conta só lê as próprias linhas. Não tem anúncio, não tem rastreador e o código está aberto para quem quiser conferir.</p>
+        <p>Os lançamentos ficam num Postgres com Row Level Security: cada conta só lê as próprias linhas. Os cartões chegam pelo Open Finance, com o seu consentimento no app do banco, e as chaves da Pluggy ficam só no servidor. Não tem anúncio, não tem rastreador e o código está aberto para quem quiser conferir.</p>
       </div>
       <ul>
         <li><b>RLS</b> em todas as tabelas</li>
+        <li><b>Open Finance</b> para ler os cartões, sem senha do banco no app</li>
         <li><b>Sem</b> SDK de anúncio ou analytics</li>
         <li><b>MIT</b> no GitHub</li>
       </ul>
